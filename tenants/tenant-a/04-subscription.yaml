@@ -1,0 +1,14 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: tenant-a
+  namespace: tenant-a
+  labels:
+    acm-app: tenant-a
+  annotations:
+    apps.open-cluster-management.io/git-branch: main
+spec:
+  channel: tenant-a-ch-git/channel
+  placement:
+    local: true

@@ -1,0 +1,11 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  namespace: tenant-a-ch-git
+  name: channel
+  labels:
+    acm-app: tenant-a
+spec:
+  pathname: https://github.com/vladimir-babichev/rhacm-tenant-a.git
+  type: Git
